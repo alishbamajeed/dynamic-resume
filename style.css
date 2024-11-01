@@ -1,0 +1,130 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background Styling */
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d3c5c5, #2e2525);
+  background: radial-gradient(circle, #5a5752, #ffd7da);
+ 
+
+}
+
+/* Centered Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  animation: fadeIn 2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Welcome Text Styling */
+.welcome-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  animation: textSlide 3s ease-in-out infinite alternate;
+  overflow: hidden;
+  animation: typing 7s steps(40) 1s infinite alternate;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ffc371;
+}
+
+/* Subtitle Styling */
+.subtitle {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 30px;
+  animation: fadeSubtitle 3s ease-in-out 1s infinite alternate;
+}
+
+@keyframes fadeSubtitle {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Button Styling */
+.lets-go-btn {
+  padding: 15px 30px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #ffc371;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(255, 195, 113, 0.4);
+  animation: buttonPulse 2s ease-in-out infinite alternate;
+}
+
+.lets-go-btn:hover {
+  background-color: #ff5f6d;
+  box-shadow: 0px 6px 15px rgba(255, 95, 109, 0.4);
+  transform: scale(1.05);
+}
+
+@keyframes buttonPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+/* Animated Circular Background */
+.background-animation {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffc371, #ff5f6d);
+  animation: rotate 10s linear infinite;
+  filter: blur(80px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.circle1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  bottom: 20%;
+  right: 15%;
+  animation-delay: 5s;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Text Slide Animation */
+@keyframes textSlide {
+  0% { transform: translateX(-10px); color: #333; }
+  100% { transform: translateX(10px); color: #ff5f6d; }
+}
